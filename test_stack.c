@@ -32,6 +32,6 @@ int main() {
 
     // Try popping from empty stack
     pop(&s, &value);
-
+    
     return 0;
 }

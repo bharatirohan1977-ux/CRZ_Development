@@ -1,0 +1,23 @@
+name: C CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: build
+      run: gcc -c Stack.c -o Stack.o
+    - name: Test
+      run: |
+        gcc -c test_stack.c -o test.o
+        gcc Stack.o test.o -o test
+        ./test
+
