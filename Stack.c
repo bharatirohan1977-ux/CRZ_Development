@@ -14,6 +14,7 @@ bool isFull(Stack *s) {
     return (s->top == STACK_SIZE - 1);
 }
 
+//This function pushes an element onto the stack
 bool push(Stack *s, int value) {
     if (isFull(s)) {
         printf("Stack Overflow! Cannot push %d\n", value);
