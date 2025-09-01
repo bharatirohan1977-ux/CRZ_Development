@@ -1,10 +1,11 @@
 #include "stack.h"
 #include <stdio.h>
 
+//This function initializes the stack
 void initStack(Stack *s) {
     s->top = -1;
 }
-
+//This function checks if the stack is empty
 bool isEmpty(Stack *s) {
     return (s->top == -1);
 }
